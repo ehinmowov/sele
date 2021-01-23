@@ -1,5 +1,5 @@
 from tkinter import *
-# importing the crawler
+# importing the crawler here
 import sele
 
 

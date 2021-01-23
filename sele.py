@@ -10,7 +10,6 @@ import os
 Please refer to the GIUs.py doc to see exactly how i sent the inputs to the crawler
 
 I have defined a special function for each action so that it would be easy for you
-e
 
 """
 
