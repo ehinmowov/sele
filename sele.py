@@ -7,7 +7,9 @@ import os
 
 """a
 
-just trying to see
+Please refer to the GIUs.py doc to see exactly how i sent the inputs to the crawler
+
+I have defined a special function for each action so that it would be easy for you
 e
 
 """
@@ -33,6 +35,7 @@ def access_form():
     sleep(2)
 
 
+'''This is one of the inputs the crawler receives from the GIUs doc'''
 def input_firstname(fn):
     first_name = driver.find_element_by_id('firstName')
     first_name.send_keys(fn)
@@ -41,11 +44,13 @@ def input_firstname(fn):
 def input_lastname(ln):
     last_name = driver.find_element_by_id('lastName')
     last_name.send_keys(ln)
+    sleep(2)
 
 
 def input_email():
     email = driver.find_element_by_id('email')
     email.send_keys('bigboy@gmail.com')
+    sleep(2)
 
 
 def select_nationality():
@@ -63,6 +68,7 @@ def select_apt_size():
     apt_size = driver.find_element_by_id('houseType')
     drop_apt_size = Select(apt_size)
     drop_apt_size.select_by_value('3+1')
+    sleep(2)
 
 
 def select_lang():
