@@ -1,11 +1,28 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.chrome.options import Options
 from time import sleep
+import os
+
+
+"""a
+
+just trying to see
+e
+
+"""
 
 
 def fill_supwork_form():
+    options = Options()
+    options.add_argument("user-agent=[user-agent string]")
+    options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    # options.add_argument("--headless")
+    # options.add_argument("--disable-dev-shm-usage")
+    # options.add_argument("--no-sandbox")
     global driver
-    driver = webdriver.Chrome('/Users/director/Desktop/databoy/chromedriver')
+    # driver = webdriver.Chrome(executable_path= os.environ.get("CHROMEDRIVER_PATH"), chrome_options=options)
+    driver = webdriver.Chrome('/Users/director/Desktop/databoy/chromedriver', chrome_options=options)
     driver.get('http://www.sup.work/tr')
 
 
